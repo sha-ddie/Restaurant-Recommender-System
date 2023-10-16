@@ -57,8 +57,10 @@ d) Build an interactive user interface that allows users to easily access and in
 # Data understanding
 
 The dataset used in this project, was extracted from the Yelp Restaurant [database](https://www.yelp.com/dataset), which is publicly available and contains a large number of reviews across various restaurants and locations. The dataset contains 908,915 tips/reviews by 1,987,897 users on the  131,930 businesses and their attributes like hours, parking, availability, and ambience aggregated check-ins over time for each. The **dataset contains five jason files namely business.json, checkin.json, review.json, tips.json and user.json**, but only two files were found to containe the relevant required information;
-**business.json**: this json file has data on various business all spread over different US states and their relevant attributes.
-**review.json**: this json file contains information on reviews made by different users on various business they were served.
+
+> **business.json**: this json file has data on various business all spread over different US states and their relevant attributes.
+
+> **review.json**: this json file contains information on reviews made by different users on various business they were served.
 
 Due to the dataset being large we have only extracted 54,380 rows and 14 columns which are enough for our analysis and the two above stated json files were merged and only the relevant columns were maintained, named;
 - **user_id:** A unique identifier for each user who submitted a review
@@ -135,6 +137,7 @@ The following steps were taken:
 Fisrtly , we model a baseline SVD() model using the default parameters. The first baseline model had an RMSE of 1.256 same as our best neighborhood based model which had an RMSE of 1.257. Using the GridSearchCv we will tune the SVD model inorder to improve the training RMSE scores.
 The SVD collaborative filtering model undergoes hyperparameter tuning through grid search and cross-validation. The optimized model achieves an RMSE of approximately 1.25, signifying good predictive accuracy. The MAE value is around 1.01, indicating improved prediction accuracy. The best hyperparameters include 'n_factors' = 20 and 'reg_all' = 0.05 for RMSE, and 'n_factors' = 20 and 'reg_all' = 0.02 for MAE. These settings make the SVD model well-suited for personalized recommendations based on user ratings.
 Finally, the code created initiates an SVD model with tailored hyperparameters, training it on the dataset for personalized user recommendations. To tackle the cold start issue, a function named **restaurant_rater()** engages users to input ratings for specific restaurants. This data is collected for analysis or to support the recommendation system. In scenarios where no user ratings exist, the function seamlessly transitions to the content-based system, effectively addressing the cold start problem.
+Link to the analysis [notebook](Phase-5-Capstone-Project/README.md Phase-5-Capstone-Project/student.ipynb)
 
 # Evaluation
 
@@ -176,6 +179,10 @@ d) Integration with food delivery services: Collaborate with food delivery servi
 
 e) Advanced machine learning algorithms: Explore the use of advanced machine learning algorithms to further enhance recommendation accuracy.
 
+# Resources
 
+1: For the complete analysis, here is the [Notebook](https://github.com/sha-ddie/Phase-5-Capstone-Project/blob/main/student.ipynb)
+
+2: The presentation slide are in this [Link](https://www.canva.com/design/DAFxJG67E08/dLd8YHTDIMBAeTA48jvuDA/view?utm_content=DAFxJG67E08&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 
