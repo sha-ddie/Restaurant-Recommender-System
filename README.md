@@ -56,13 +56,13 @@ d) Build an interactive user interface that allows users to easily access and in
 
 # Data understanding
 
-The dataset used in this project, was extracted from the Yelp Restaurant [database](https://www.yelp.com/dataset), which is publicly available and contains a large number of reviews across various restaurants and locations. The dataset contains 908,915 tips/reviews by 1,987,897 users on the  131,930 businesses and their attributes like hours, parking, availability, and ambience aggregated check-ins over time for each. The **dataset contains five jason files namely business.json, checkin.json, review.json, tips.json and user.json**, but only two files were found to containe the relevant required information;
+The dataset used in this project, was extracted from the Yelp Restaurant [database](https://www.yelp.com/dataset), which is publicly available and contains a large number of reviews across various restaurants and locations. The dataset contains 908,915 tips/reviews by 1,987,897 users on the  131,930 businesses and their attributes like hours, parking, availability, and ambience aggregated check-ins over time for each. The **dataset contains five json files namely business.json, checkin.json, review.json, tips.json and user.json**, but only two files were found to contain the relevant required information;
 
-> **business.json**: this json file has data on various business all spread over different US states and their relevant attributes.
+> **business.json**: this json file has data on various businesses all spread over different US states and their relevant attributes.
 
-> **review.json**: this json file contains information on reviews made by different users on various business they were served.
+> **review.json**: this json file contains information on reviews made by different users on various businesses they were served.
 
-Due to the dataset being large we have only extracted 54,380 rows and 14 columns which are enough for our analysis and the two above stated json files were merged and only the relevant columns were maintained, named;
+Due to the dataset being large we have only extracted 54,380 rows and 14 columns which are enough for our analysis and the two stated json files were merged and only the relevant columns were maintained, namely;
 - **user_id:** A unique identifier for each user who submitted a review
 
 - **business_id:** A unique identifier for each business being reviewed
@@ -91,7 +91,7 @@ Due to the dataset being large we have only extracted 54,380 rows and 14 columns
 
 - **hours:** hours in when the business is open,hours are using a 24hr clock
 
-For download of the dataset's, view the [Link](https://www.yelp.com/dataset) anf for complete [documentation](https://www.yelp.com/dataset/documentation/main) of all the datasets.
+For download of the dataset's, view the [Link](https://www.yelp.com/dataset) and for complete [documentation](https://www.yelp.com/dataset/documentation/main) of all the datasets.
 
 # Data Preparation
 
@@ -102,7 +102,7 @@ In this section, we will perform data cleaning to prepare the dataset for analys
 - Checking and removing duplicates 
 - Feature Engineering
 - Selecting the Relevant Columns
-- Droping Irrelevant columns
+- Dropping Irrelevant columns
 - Selecting relevant rows
 
 # Explatory Data Analysis
@@ -134,7 +134,7 @@ Using the cosine similarity matrix, our content-based recommendation system sugg
 
 In building a collaborative filtering recommendation system with the Surprise library, we selected relevant columns and initialized a Reader object to format the data. Subsequently, we loaded the data into a Surprise Dataset for further analysis and model creation. We then compared various neighborhood-based models to identify the top performer based on the RMSE metric. Following this, we compared the neighborhood-based model with model-based models to determine the best overall model for our recommendation system. 
 The following steps were taken:
-Fisrtly , we model a baseline SVD() model using the default parameters. The first baseline model had an RMSE of 1.256 same as our best neighborhood based model which had an RMSE of 1.257. Using the GridSearchCv we will tune the SVD model inorder to improve the training RMSE scores.
+Firstly , we model a baseline SVD() model using the default parameters. The first baseline model had an RMSE of 1.256 same as our best neighborhood-based model which had an RMSE of 1.257. Using the GridSearchCv we will tune the SVD model in order to improve the training RMSE scores.
 The SVD collaborative filtering model undergoes hyperparameter tuning through grid search and cross-validation. The optimized model achieves an RMSE of approximately 1.25, signifying good predictive accuracy. The MAE value is around 1.01, indicating improved prediction accuracy. The best hyperparameters include 'n_factors' = 20 and 'reg_all' = 0.05 for RMSE, and 'n_factors' = 20 and 'reg_all' = 0.02 for MAE. These settings make the SVD model well-suited for personalized recommendations based on user ratings.
 Finally, the code created initiates an SVD model with tailored hyperparameters, training it on the dataset for personalized user recommendations. To tackle the cold start issue, a function named **restaurant_rater()** engages users to input ratings for specific restaurants. This data is collected for analysis or to support the recommendation system. In scenarios where no user ratings exist, the function seamlessly transitions to the content-based system, effectively addressing the cold start problem.
 Link to the analysis [notebook](Phase-5-Capstone-Project/README.md Phase-5-Capstone-Project/student.ipynb)
@@ -183,6 +183,6 @@ e) Advanced machine learning algorithms: Explore the use of advanced machine lea
 
 1: For the complete analysis, here is the [Notebook](https://github.com/sha-ddie/Phase-5-Capstone-Project/blob/main/student.ipynb)
 
-2: The presentation slide are in this [Link](https://www.canva.com/design/DAFxJG67E08/dLd8YHTDIMBAeTA48jvuDA/view?utm_content=DAFxJG67E08&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+2: The presentation slides are in this [Link](https://www.canva.com/design/DAFxJG67E08/dLd8YHTDIMBAeTA48jvuDA/view?utm_content=DAFxJG67E08&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 3: The link to the [data report](https://docs.google.com/document/d/1is0vYgn6F7dWinPTQpltICMkTC5JJ4_ov6n5XcSfcF4/edit)
