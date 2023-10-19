@@ -111,13 +111,17 @@ Conducting a thorough exploratory data analysis (EDA) is pivotal in crafting an 
 Visualizations, including histograms, box plots, and hexbin plots, were employed for a comprehensive understanding. Histograms shed light on the distribution of ratings, categories, and restaurant counts in cities and states, while box plots showcased business ratings against the price ranges. The hexbin plot illustrated the relationship between business ratings and the number of reviews. Word clouds were generated to highlight common words in positive and negative reviews, and a map visualized restaurant locations.
 This EDA offered vital insights, identifying key dataset features.
 The dataset is primarily composed of food-related establishments, highlighting a diverse range of cuisines. Nightlife venues are also notable, indicating a vibrant nightlife scene. Conversely, fast food and burger establishments are less prevalent in the dataset.
-![Alt text](image.png)
 
-Philadelphia stands out as the most prevalent city in the dataset, boasting the highest number of restaurants. Tampa follows, though not as closely, indicating a noteworthy restaurant presence. In contrast, Reno and Santa Barbara have fewer restaurants, making them less common in this dataset.
-![Alt text](image-1.png)
+![Alt text](./data/categories.png)
+
+The word cloud visually represents the most common words found in the positive review texts, where the size of each word in the cloud corresponds to its frequency in the reviews. This provides an overview of the key terms and themes in positive reviews.
+Therefore from the plot above, the most occurring words in the positive reviews are words like , good, food, place , great , delicious , great , service , amazing , best,..etc.
+
+![Alt text](./data/text_p.png)
 
 The review counts for the restaurants are listed in descending order, with Luke leading at 4554 reviews, followed by Santa Barbara Shellfish Company with 2404 reviews, Cafe Fleur De Lis with 1865 reviews, and Milk and Honey Nashville with 1725 reviews. These counts reflect the popularity and customer engagement of each restaurant.
-![Alt text](image-2.png)
+
+![Alt text](./data/popular.png)
 
 # Modelling
 
@@ -137,7 +141,13 @@ The following steps were taken:
 Firstly , we model a baseline SVD() model using the default parameters. The first baseline model had an RMSE of 1.256 same as our best neighborhood-based model which had an RMSE of 1.257. Using the GridSearchCv we will tune the SVD model in order to improve the training RMSE scores.
 The SVD collaborative filtering model undergoes hyperparameter tuning through grid search and cross-validation. The optimized model achieves an RMSE of approximately 1.25, signifying good predictive accuracy. The MAE value is around 1.01, indicating improved prediction accuracy. The best hyperparameters include 'n_factors' = 20 and 'reg_all' = 0.05 for RMSE, and 'n_factors' = 20 and 'reg_all' = 0.02 for MAE. These settings make the SVD model well-suited for personalized recommendations based on user ratings.
 Finally, the code created initiates an SVD model with tailored hyperparameters, training it on the dataset for personalized user recommendations. To tackle the cold start issue, a function named **restaurant_rater()** engages users to input ratings for specific restaurants. This data is collected for analysis or to support the recommendation system. In scenarios where no user ratings exist, the function seamlessly transitions to the content-based system, effectively addressing the cold start problem.
-Link to the analysis [notebook](Phase-5-Capstone-Project/README.md Phase-5-Capstone-Project/student.ipynb)
+
+Link to the analysis [Notebook](https://github.com/sha-ddie/Phase-5-Capstone-Project/blob/main/student.ipynb)
+
+# Deep - Neural Networks
+
+A deep neural network was also incoperated in the modeling section, where is user and restaurant embeddings/latent factors were multiplied together to predict the user rating which was then passed into a dense connected layers. The model was tunned and regularized to reduce ovefitting and improve validation RMSE scores. 
+
 
 # Evaluation
 
