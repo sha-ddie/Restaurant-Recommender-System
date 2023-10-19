@@ -112,16 +112,16 @@ Visualizations, including histograms, box plots, and hexbin plots, were employed
 This EDA offered vital insights, identifying key dataset features.
 The dataset is primarily composed of food-related establishments, highlighting a diverse range of cuisines. Nightlife venues are also notable, indicating a vibrant nightlife scene. Conversely, fast food and burger establishments are less prevalent in the dataset.
 
-![Alt text](./data/categories.png)
+![Alt text](./images/categories.png)
 
 The word cloud visually represents the most common words found in the positive review texts, where the size of each word in the cloud corresponds to its frequency in the reviews. This provides an overview of the key terms and themes in positive reviews.
 Therefore from the plot above, the most occurring words in the positive reviews are words like , good, food, place , great , delicious , great , service , amazing , best,..etc.
 
-![Alt text](./data/text_p.png)
+![Alt text](./images/text_p.png)
 
 The review counts for the restaurants are listed in descending order, with Luke leading at 4554 reviews, followed by Santa Barbara Shellfish Company with 2404 reviews, Cafe Fleur De Lis with 1865 reviews, and Milk and Honey Nashville with 1725 reviews. These counts reflect the popularity and customer engagement of each restaurant.
 
-![Alt text](./data/popular.png)
+![Alt text](./images/popular.png)
 
 # Modelling
 
