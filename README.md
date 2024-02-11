@@ -105,7 +105,7 @@ In this section, we will perform data cleaning to prepare the dataset for analys
 - Dropping Irrelevant columns
 - Selecting relevant rows
 
-# Explatory Data Analysis
+# Exploratory Data Analysis
 
 Conducting a thorough exploratory data analysis (EDA) is pivotal in crafting an interactive and user-friendly restaurant recommendation system. The analysis delved into critical dataset features, examining the distribution of ratings, categories, and restaurants across cities and states, as well as popular restaurants.
 Visualizations, including histograms, box plots, and hexbin plots, were employed for a comprehensive understanding. Histograms shed light on the distribution of ratings, categories, and restaurant counts in cities and states, while box plots showcased business ratings against the price ranges. The hexbin plot illustrated the relationship between business ratings and the number of reviews. Word clouds were generated to highlight common words in positive and negative reviews, and a map visualized restaurant locations.
